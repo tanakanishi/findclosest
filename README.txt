@@ -6,6 +6,8 @@
 
 ###Requirement
 
+Please save all the files in the {findclosest} directory.
+
 bedtools (https://bedtools.readthedocs.io/en/latest/content/installation.html)
 python (python 2.7.12 or higher or python 3)
 python modules : numpy, pandas, statistics, scipy.cluster, scipy.spatial.distance
