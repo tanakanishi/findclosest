@@ -5,8 +5,6 @@
 
 
 ###Requirement
-1: First, please make {findclosest} directory.
-2: Next, please save all the files in this {findclosest} directory.
 
 bedtools (https://bedtools.readthedocs.io/en/latest/content/installation.html)
 python (python 2.7.12 or higher or python 3)
@@ -31,13 +29,13 @@ Please input {samplename}.narrowPeak file, the output of MACS2
 
 ###Output
 
-{samplename} directory is made and under the "findclosest" directory.
+{samplename} directory is made and under the current directory.
 (i) Rank the peak results in the order of ascending p-values and acquire top 64000 peaks  => {samplename}.64000.bed
 (ii) Calculate the Hamming distance between input sample and 77 ATAC-seq datasets => {samplename}.distanceresult.withtitle.txt
 (iii) Clustering result => {samplename}.distanceresult.withtitle.pdf
 (iv) Which cell type is closeset to the input sample => Please see {samplename}.close_cell_type.txt. Each column indicates "ranking", "cell type", "diatance".
 
-above (i), (ii), (iii),(iv)  files are stored under findclosest/samplename directory
+above (i), (ii), (iii),(iv)  files are stored under ./samplename directory
 
 
 ###Usage
@@ -48,10 +46,10 @@ sh calculate.sh {INPUTfile}
 (1) merge.pvalue2.64000.GEO.txt => 
 	distance matrix between 77 ATAC-seq datasets from 13 human primary blood cell types (For the calculation, top 64000 peaks of each sample is used)
 
-(2) Files in the findclosest/GEOdata directory => 
+(2) Files in the ./GEOdata directory => 
 	For example, "Bcell_1.pvalue2.64000.bed" is produced by ranking the peak result in the order of ascending p-values and acquiring top 64000 peaks of Bcell_1 peak calling result.
 
-(3) Files in the findclosest/addiotional  directory
+(3) Files in the ./addiotional  directory
 	(i) samplelist.txt => 
 		Sample name and its corresponding GSM number
 	(ii) penaltyscore.sh => 
