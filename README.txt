@@ -5,8 +5,8 @@
 
 
 ###Requirement
-
-Please save all the files in the {findclosest} directory.
+1: First, please make {findclosest} directory.
+2: Next, please save all the files in this {findclosest} directory.
 
 bedtools (https://bedtools.readthedocs.io/en/latest/content/installation.html)
 python (python 2.7.12 or higher or python 3)
